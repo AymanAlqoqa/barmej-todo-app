@@ -1,0 +1,84 @@
+/* List Style */
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-container h2 {
+  font-weight: bold;
+  font-size: 2em;
+  text-transform: uppercase;
+  width: 70%;
+  min-width: 350px;
+  text-align: left;
+  /* background-color: #968596; */
+  padding: 10px;
+
+  /* border-rad ius: 50px; */
+  color: rgb(62, 10, 10);
+  /* box-shadow: 1px 2px 1px 1px rgb(53, 47, 51); */
+  border: 1px solid #3e0a0a;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 2px;
+  font-weight: bolder;
+  padding-left: 20px;
+  padding-bottom: 0px;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/*Card Style */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid rgb(194, 104, 104);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 30%;
+  min-width: 300px;
+  box-shadow: 5px 5px #5a4d4d;
+  background-color: rgba(251, 143, 0, 0.11);
+  max-height: 300px;
+  overflow: hidden;
+}
+.card .card-delete {
+  display: none;
+}
+.card:hover .card-delete {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  align-self: flex-end;
+}
+.card h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.card p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Error Message */
+.error {
+  position: absolute;
+  top: 50px;
+  /* width: 100%; */
+  text-align: left;
+  padding: 20px;
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+  background-color: red;
+}
