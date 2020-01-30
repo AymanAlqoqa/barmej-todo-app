@@ -10,6 +10,9 @@ export default class Home extends Component {
   componentDidMount() {
     this.fetchData();
   }
+  componentDidUpdate() {
+    this.fetchData();
+  }
   fetchData() {
     fetch(LIST_URI)
       .then(res => {
@@ -33,6 +36,7 @@ export default class Home extends Component {
       .then(res => this.refresh())
       .catch(err => console.log(err));
   };
+
   refresh = () => {
     this.fetchData();
   };
@@ -40,7 +44,11 @@ export default class Home extends Component {
     return (
       <div>
         <Form refresh={this.refresh} />
-        <List list={this.state.list} deletePost={this.handleDelete} />
+        <List
+          list={this.state.list}
+          deletePost={this.handleDelete}
+          refresh={this.refresh}
+        />
       </div>
     );
   }

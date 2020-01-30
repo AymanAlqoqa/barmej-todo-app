@@ -38,38 +38,73 @@
 /*Card Style */
 .card {
   display: flex;
+  position: relative;
   flex-direction: column;
   padding: 20px;
   border: 1px solid rgb(194, 104, 104);
   border-radius: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
-  width: 30%;
-  min-width: 300px;
+  width: 40%;
+  min-width: 400px;
   box-shadow: 5px 5px #5a4d4d;
   background-color: rgba(251, 143, 0, 0.11);
-  max-height: 300px;
+  height: fit-content;
   overflow: hidden;
 }
-.card .card-delete {
+.card .card-delete-edit {
   display: none;
 }
-.card:hover .card-delete {
-  display: block;
+
+.card:hover .card-delete-edit {
+  display: inline-block;
   cursor: pointer;
   position: absolute;
-  z-index: 2;
+  top: 12px;
   align-self: flex-end;
+}
+.card:hover .card-delete-edit span {
+  margin-left: 10px;
 }
 .card h3 {
   text-transform: uppercase;
   text-align: center;
+  width: 50%;
+  margin: 10px auto;
 }
 .card p {
   text-align: justify;
   text-justify: inter-word;
+  width: 80%;
+  margin: 10px auto;
 }
 
+.card input,
+.card textarea {
+  line-height: 1.5em;
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.2em;
+}
+.card .edit-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  margin-top: 5px;
+}
+.card .edit-btn-container button {
+  padding: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  outline: none;
+  background-color: #3e0a0ade;
+  color: #ffffff;
+  width: 20%;
+}
+.card .edit-btn-container .cancel-btn {
+  background-color: red;
+}
 /* Error Message */
 .error {
   position: absolute;
