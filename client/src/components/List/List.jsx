@@ -5,7 +5,7 @@ import "./style.css";
 
 export default class List extends Component {
   render() {
-    const { list, deletePost } = this.props;
+    const { list, deletePost, refresh } = this.props;
     return (
       <>
         {list.length > 0 ? (
@@ -13,7 +13,13 @@ export default class List extends Component {
             <h2>My List</h2>
             <div className="list">
               {list.map(({ _id, ...rest }) => (
-                <Card key={_id} {...rest} id={_id} deletePost={deletePost} />
+                <Card
+                  key={_id}
+                  {...rest}
+                  id={_id}
+                  deletePost={deletePost}
+                  refresh={refresh}
+                />
               ))}
             </div>
           </div>
