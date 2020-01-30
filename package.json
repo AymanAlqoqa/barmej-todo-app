@@ -2,5 +2,13 @@
   "name": "react-demo2",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" --kill-others"
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
 }

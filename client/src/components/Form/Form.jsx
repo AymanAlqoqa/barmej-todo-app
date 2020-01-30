@@ -28,7 +28,11 @@ export default class Form extends Component {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res);
+        this.props.refresh();
+        this.setState({
+          title: "",
+          description: ""
+        });
       })
       .catch(err => console.log(err));
   };
